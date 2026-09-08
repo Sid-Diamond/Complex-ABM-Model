@@ -1,0 +1,196 @@
+Context Document for New Chat
+Objective
+Over the next few months, the goal is to build a stronger profile for BlueDot, LASR, and later MATS-style applications by producing visible, safety-relevant work rather than relying on polished application framing alone. The immediate aim is to choose and scope one small, sharp project that demonstrates improved research taste, clearer risk-reduction reasoning, and concrete execution.
+
+Key Takeaways from the MATS Feedback
+Explicit positive signals
+
+Strong evidence of independent technical research execution
+Good methodological judgment, especially around when statistical/empirical methods’ assumptions fail
+Application materials suggested real technical ability and seriousness
+
+Explicit weaknesses
+
+Weakness in making the risk-reduction / safety relevance argument explicit
+Work tests came in below what the written application implied
+Research-taste test issues:
+
+hypotheses not genuinely distinct
+too much weight on one explanatory frame
+threat modeling too generic
+tasks had limited epistemic discrimination
+stopping rules not tied to decisions
+
+
+
+Likely implicit messages
+
+The main concern is not raw ability, but whether technical thinking is being translated into alignment-shaped, decision-relevant research
+There may be a credibility problem of “sounds stronger on paper than under direct evaluation”
+The application may have leaned toward interesting technical ideas without making clear how they reduce catastrophic risk
+More evidence is needed that the applicant can identify cruxes, compare multiple hypotheses, and design experiments that actually discriminate
+
+What seems genuinely important vs less central
+Most important:
+
+research taste under ambiguity
+risk-reduction framing
+producing visible evidence that closes the gap between written application strength and practical evaluation
+
+Less central:
+
+generic polishing of prose
+broad reflective writing untied to output
+overinterpreting every detail of the rejection
+
+
+Gap Diagnosis
+Skill gaps
+
+generating genuinely distinct hypotheses
+identifying the crux
+designing high-discrimination tests
+tying results to decisions / operational relevance
+making safety impact legible
+
+Credibility gaps
+
+not enough public evidence of alignment-shaped work
+current profile risks reading as “strong thinker, unclear applied research taste”
+need outputs that others can inspect: report, code, post, critique loop
+
+Presentation gaps
+
+real but secondary
+tendency to leave the impact argument implicit
+may present abstraction/technical elegance before concrete failure mode and intervention logic
+
+What to fix first
+
+Credibility + skill together, via a concrete project
+Risk-reduction framing, embedded into the project from the start
+Presentation, after there is new evidence worth presenting
+
+
+Strategic Conclusions from This Chat
+What we decided not to do
+
+Do not lead with a quick LessWrong post about the feedback itself
+Do not treat this mainly as a wording/presentation issue
+Do not spend weeks on abstract agenda refinement before producing evidence
+
+Highest-value move
+Do one small, sharp, public project that demonstrates:
+
+multiple distinct hypotheses
+discriminating tests
+explicit risk-reduction logic
+concrete execution
+
+Then write about that.
+Recommended order of operations
+
+Scope project now
+Apply to BlueDot / LASR immediately after
+Continue executing the project
+Publish report/repo
+Write LessWrong or similar post on the project, not the rejection
+Use that output for future applications
+
+Why a quick reflective LessWrong post is not the main move
+Because it is weak evidence. It may be efficient, but it does not directly solve the main bottleneck: lack of visible proof of stronger alignment research taste and clearer impact framing. The post is best used as a wrapper for real work, not a substitute for it.
+
+Project Selection Criteria
+A good project must have
+
+clear alignment/safety relevance
+a specific phenomenon or question, not a vague agenda
+at least 3–4 genuinely distinct hypotheses
+cheap, discriminating tests
+a clear statement of:
+
+what failure mode is at stake
+who would use the result
+what decision could change
+
+
+feasible scope for a first result in roughly 2–4 weeks
+ability to produce public artifacts
+
+Failure modes to avoid
+
+elegant but vague technical projects
+projects with only one explanatory frame
+tasks that are technically reasonable but low-information
+generic severity claims with no operational pathway
+reflective writing in place of research output
+overlarge scope that prevents shipping anything
+
+What would count as strong visible evidence of improvement
+
+a short technical report
+a clean repo / notebook
+a concise risk-reduction memo
+a public writeup explaining the crux, method, and what changed
+external critique/red-teaming showing iteration
+
+
+Constraints and Preferences
+
+Wants brutally honest, constructive, strategically useful advice
+Strongly dislikes sycophancy
+Wants concise, efficient, high-signal responses
+Time is finite; projects should be ambitious but feasible
+Wants outputs that improve:
+
+learning
+portfolio strength
+future applications
+
+
+Does not want to get stuck in meta-discussion; wants agentic action
+
+
+Current Plan
+
+Today: scope a project with the MATS feedback in mind
+Tomorrow: complete and submit BlueDot application
+
+emphasize strengths shown in MATS materials
+mention current project as evidence of responding agentically to feedback
+
+
+After submitting: continue the project immediately
+Later: use project output for posts/applications rather than posting first
+
+
+Open Question for the Next Chat
+Help choose the best project by generating and ranking candidate ideas that fit the above constraints.
+The next chat should focus on:
+
+proposing project ideas
+comparing them clearly
+stress-testing whether they actually address the MATS feedback
+helping scope one into a minimum viable plan
+
+
+What the next chat should do
+Propose 8–12 concrete project ideas, each with:
+
+the core question
+why it fits this feedback
+the main hypotheses
+what tests would discriminate between them
+expected deliverables
+feasibility over 2–6 weeks
+portfolio value for BlueDot / LASR / later MATS
+major risks/failure modes
+
+Then rank them by:
+
+expected learning value
+credibility/portfolio value
+feasibility/speed
+fit to the specific weaknesses highlighted by MATS
+
+Finally, recommend the top 3 and give a minimum viable scope for each.
