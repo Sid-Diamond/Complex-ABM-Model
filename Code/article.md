@@ -1,9 +1,9 @@
 
 
+##High Impact Complex System Models Have Come of Age 
 
+##Motivation
 
-High Impact Complex System Models Have Come of Age 
-Motivation
 Calculating the probability that an event causing extreme suffering occurs is, by itself, not a particularly high-impact thing to do. Using this probability alone to inform policy decisions that could potentially result in a reduction of this suffering is better. However, better still than considering risk size and the probability of occurrence alone is a prediction capable of producing a robust policy. 
 
 The purpose of this article is both to explain what is meant by a robust policy and to provide a gentle introduction to models explicitly capable of reducing risk by doing so: complex systems. My next article will be a technical piece on exactly how to do so. 
@@ -13,7 +13,8 @@ As far as I'm aware, given my limited knowledge of population ethics, the signif
 As is always the case in creating, be it music, scientific research or opinion pieces on the importance of complexity economics, the last thing you read before you start writing is always someone with the same idea you've had doing it better. In this instance, for those more familiar complexity economics and with more time on their hands, I point you toward chapter 24 of The Economy as an Evolving Complex System IV: Beyond Efficiency: Labor-Market Resilience in an Age of AI and Net Zero. 
 
 
-Basics of Mathematical Modelling
+##Basics of Mathematical Modelling
+
 For those still reading, let me begin (sort of) simply. The probability an event occurs is typically modelled using a probability distribution containing parameters. Stay with me, I promise it's not too bad. A probability distribution describes how probability is assigned to the possible values of a random variable. This is far easier illustrated through an example: sizes of feet follow a probability distribution called a bell curve. Most people somewhere in the middle, with equally few people with tiny or very large feet. When drawn as a single continous line, this creates a bell shape. Here, a foot is the random variable. A parameter is a number that impacts the shape of this bell-shaped probability distribution, for example, how fat or thin the distribution of foot-size is. In other words, if a shoe shop is stocking shoes, what number impacts how many shoes they should buy in each size? Are 60% of customers between a size 4 and 10 shoe (fat)? Or are 60% of customers a size 7 (thin)? The answer to this would be captured in a parameter called standard deviation, 
  See Figure 1 below. 
 
@@ -27,7 +28,7 @@ To answer this, let us consider a slightly more relevant example. Suppose you ar
 
 Now let us imagine that Policy A’s distribution contains a parameter that, if changed even slightly, results in a complete swing in model output, such that it predicts only a 0.5% decrease in flood damage. In contrast, Policy B, under the same parameter tweak, changes only slightly, still predicting a 49% decrease in flood damage. We call the extent to which a distribution is affected by changes in its parameters its robustness. Clearly, for a policymaker using these models to inform a real-world action, distributional robustness matters.
 
-So, how do we design more robust policies? 
+##So, how do we design more robust policies? 
 
 
 
@@ -57,7 +58,8 @@ In short, to reiterate, the reasons these models are so powerful is that they en
 
 
 
-Benefits of Complexity Economics 
+##Benefits of Complexity Economics 
+
 On top of this, for labour displacement forecasting anyway, another great thing about these networks is that, compared to convenvential economic models, they are better at predicting and in turn designing systems more resilient to unprecedented change [3] . One such unprecedented change could be the overnight introduction of a new frontier AI model capable of causing mass job displacement. As an aside, for those interested in reading more on this, I would recommend reading the work of Dr Maria del rio Chanona. 
 
 I will now introduce a particular type of network model called Agent-Based-Models (ABMs). 
@@ -72,31 +74,14 @@ More simply put. this time by Farmer and Axtell, ABM modelling has “come of ag
 
 
 
-Conclusion
+##Conclusion
+
 ABM-based complex systems models have come of age. For the EA and forecasting communities, I believe these models offer significant promise. It is also worth reiterating, however, that these models can and likely will be used to cause suffering. They can and likely will be used for  surveillance capitalism, predictive policing and election interference, in turn making those who do so incredibly wealthy. The moral cost of one of these models falling into wrong hands is a very real consideration. Here, care must be taken.  Nevertheless, for those who are well-intentioned, I think significant promise lies in their use. Finally, as I will touch on in my next article, the largest bottleneck for these models is data. This data will feel invasive, and it will not be cheap. However, this data exists and, if used with good intention, can help create models capable of reducing suffering on a large scale. 
 
 
 
-My Next Article
+##My Next Article
+
 For those interested, my next article will be on exactly how I would build one such model to forecast labour displacement as a result of the release of frontier AI models. My background is in theoretical network science, natural language processing (NLP), and quantifying uncertainty in transformer architectures. Interestingly, given perhaps the non-linearity of both the labour market and a neural network, and the fact that both can be modelled by an object called a directed acyclic graph (DAG), which is a member of the network family, there is a good deal of overlap in technique. Mech interpretebility researchers interesting in pivoting to forecasting perhaps take note.
 
 Finally, for those wondering, the post image is a network of cell tissues in a mouse's brain. Which, interestingly, looks remarkably similar to the network of IP adresses on the internet. 
-
-Set topics
-Global health & development
-Animal welfare
-Existential risk
-Biosecurity
-Philosophy
-Community
-Building effective altruism
-Opportunities to take action
-Cause prioritization
-Career choice
-Effective giving
-Good things & impact stories
-AI safetyPolicyForecastingEconomics of artificial intelligenceModel uncertaintyModelsOpinionResearchRisk assessment+ Add topic
-Co-Authors
-Edit link preview
-High Impact Complex System Models Have Come of Age
-
