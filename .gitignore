@@ -32,8 +32,11 @@ dist/
 .DS_Store
 Thumbs.db
 
-# Project-local private/generated folders
-emails/
+# Project-local private/generated 
+Emails/
+
+# Local datasets and private extracts
+Code/Data/
 
 # Saved webpage assets
 AI Safety Forecasters, Use ABM Complex System Models — EA Forum_files/
