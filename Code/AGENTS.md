@@ -2,8 +2,8 @@
 
 ## Current phase
 
-We are designing project context and learning Codex. Do not write
-implementation code unless explicitly requested.
+We are preparing for paper-led, staged network development. Do not write
+implementation code until the paper and first network step are agreed.
 
 ## Priorities
 
@@ -39,6 +39,18 @@ secrets, generated files, and accidental changes.
 
 Use parallel agents only for independent tasks with clear, reconcilable outputs.
 The primary agent integrates and checks their results.
+
+## MCP and tools
+
+- Prefer targeted, read-only inspection before edits or external calls.
+- Treat MCP resources as context, prompts as reusable workflows, and tools as
+  actions; use the least powerful primitive that fits.
+- Before an unfamiliar tool, inspect its purpose, inputs, outputs, permissions,
+  and side effects.
+- Keep tool calls narrow and preserve source/provenance in the result.
+- Ask before external writes, data sharing, downloads, commits, pushes, or
+  other consequential actions.
+- Validate tool outputs; do not treat them as established facts automatically.
 
 ## Repository and context
 

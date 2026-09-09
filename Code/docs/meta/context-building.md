@@ -35,8 +35,17 @@ Commits and pushes require an explicit request and final review.
 
 ## MCP and parallel agents
 
-Before using an unfamiliar MCP tool, explain what it does, what it needs, what
-it may access or change, and how the researcher can review the result.
+Use the least powerful MCP primitive that fits:
+
+- resources for read-only context or data;
+- prompts for reusable user-invoked workflows;
+- tools for actions or computation.
+
+Before using an unfamiliar tool, explain its purpose, inputs, outputs,
+permissions, side effects, provenance, and review method. Prefer narrow,
+read-only calls first. Ask before external writes, data sharing, downloads, or
+other consequential actions. Validate tool results instead of treating them as
+facts automatically.
 
 Use parallel agents only for independent, reconcilable subtasks. The primary
 agent remains responsible for integration and verification.
