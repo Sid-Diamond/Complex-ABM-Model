@@ -6,56 +6,39 @@
 
 ## Plan
 
-“Inspect the relevant context first. Before changing anything, make a concise
-plan and include: intended outcome, scope, files, assumptions, acceptance
-criteria, risks, and verification. Ask grouped questions only where the answer
-would materially change the result.”
+“Inspect the relevant context. Before changing anything, make a concise plan
+covering outcome, scope, files, assumptions, acceptance criteria, risks, and
+verification. Ask only decision-relevant questions.”
 
 ## Focused task
 
-“The outcome I want is: [outcome]. The reason is: [why]. Work only within:
-[scope]. Do not change: [out of scope]. Done means: [acceptance criteria].
-First inspect the relevant files and tell me your plan.”
+“The outcome is: [outcome]. The reason is: [why]. Work only within [scope]. Do
+not change [out of scope]. Done means [criteria]. First inspect the files and
+show me your plan.”
 
-## Structure
+## Structure / critique / decide
 
-“Turn this discussion into a draft Markdown document. Mark uncertainties and
-proposals clearly.”
+“Turn this discussion into a draft Markdown document; mark uncertainties.”
 
-## Critique
+“Critique this against the stated goal and identify edge cases; do not redesign
+it yet.”
 
-“Critique this idea against the stated goal. Identify edge cases, but do not
-redesign it yet.”
+“Give the main options and trade-offs, ask decision-relevant questions, then
+recommend one.”
 
-## Decide
+## Test / review
 
-“Give me the main options and trade-offs. Ask any decision-relevant questions,
-then recommend one.”
+“Identify expected behaviour, failure modes, and edge cases. Propose or update
+meaningful tests, run proportionate checks, and report uncertainty.”
 
-## Test
+“Review the diff for correctness, scope creep, missing edge cases, scientific or
+security risks, and documentation drift. Do not edit; order findings by severity.”
 
-“Identify the expected behaviour, normal cases, failure modes, and edge cases.
-Propose or update meaningful tests before changing the implementation. Run the
-proportionate checks and report exactly what passed or remains uncertain.”
+## Record / commit / MCP
 
-## Review
+“Record this decision in the relevant Markdown file and explain the change.”
 
-“Review the current diff for correctness, scope creep, missing edge cases,
-scientific or security risks, and documentation drift. Do not edit anything;
-give findings ordered by severity.”
+“Review the diff, tests, and documentation. Summarise what would be committed or
+pushed, then wait for my explicit approval.”
 
-## Record
-
-“Update the relevant Markdown document with this decision and explain what
-changed.”
-
-## Commit or push
-
-“Review the changed files, diff, tests, and documentation. Summarise what would
-be committed or pushed, identify any remaining risks, and wait for my explicit
-approval before doing it.”
-
-## MCP learning
-
-“Explain what this MCP task does, what information it needs, and how I can
-review the result before using it.”
+“Explain this MCP task, its inputs and effects, and how I can review its result.”

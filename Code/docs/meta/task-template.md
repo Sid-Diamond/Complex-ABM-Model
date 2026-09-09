@@ -1,37 +1,23 @@
 # Task Template
 
-Use this template when a task is large, ambiguous, or likely to modify files.
+Use for large, ambiguous, or file-changing tasks.
 
 ```markdown
 ## Outcome
-
-What result do I want?
-
-## Why
-
-Why does it matter?
+[What result do I want, and why?]
 
 ## Scope
+[What may change? What is out of scope?]
 
-What may change?
-
-## Out of scope
-
-What must not change?
-
-## Relevant context
-
-Which files, documents, errors, or references matter?
+## Context
+[Relevant files, documents, errors, or references]
 
 ## Acceptance criteria
-
-How will we know the task is complete?
+[How will we know it is complete?]
 
 ## Verification
-
-What test, command, experiment, inspection, or review should be performed?
+[Test, command, experiment, inspection, or review]
 
 ## Permission boundary
-
-May Codex edit files, run commands, use external tools, commit, or push?
+[May Codex edit, run tools, commit, or push?]
 ```
