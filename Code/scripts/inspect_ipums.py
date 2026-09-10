@@ -41,6 +41,9 @@ def main() -> None:
         return line[start - 1 : end].strip()
 
     db = sqlite3.connect(DB_PATH)
+    db.execute("PRAGMA journal_mode=MEMORY")
+    db.execute("PRAGMA synchronous=OFF")
+    db.execute("PRAGMA temp_store=MEMORY")
     db.execute("DROP TABLE IF EXISTS source_observations")
     db.execute("DROP TABLE IF EXISTS observations")
     db.execute(
@@ -96,18 +99,30 @@ def main() -> None:
         JOIN observations AS b
           ON a.pid = b.pid
          AND (b.year * 12 + b.month) = (a.year * 12 + a.month) + 1
-        WHERE a.occ != '0000' AND b.occ != '0000'
+        WHERE a.occ != '' AND b.occ != ''
     """
-    total = db.execute(f"SELECT COUNT(*) {join}").fetchone()[0]
-    changed = db.execute(f"SELECT COUNT(*) {join} AND a.occ != b.occ").fetchone()[0]
-    self_edge_types = db.execute(
-        f"SELECT COUNT(DISTINCT a.occ || ':' || b.occ) {join} AND a.occ = b.occ"
-    ).fetchone()[0]
-    changed_edge_types = db.execute(
-        f"SELECT COUNT(DISTINCT a.occ || ':' || b.occ) {join} AND a.occ != b.occ"
-    ).fetchone()[0]
-    if total != (total - changed) + changed:
-        raise RuntimeError("Transition arithmetic failed")
+    def report(label: str, extra_filter: str = "") -> None:
+        scoped_join = f"{join} {extra_filter}"
+        total = db.execute(f"SELECT COUNT(*) {scoped_join}").fetchone()[0]
+        changed = db.execute(
+            f"SELECT COUNT(*) {scoped_join} AND a.occ != b.occ"
+        ).fetchone()[0]
+        self_edge_types = db.execute(
+            f"SELECT COUNT(DISTINCT a.occ || ':' || b.occ) "
+            f"{scoped_join} AND a.occ = b.occ"
+        ).fetchone()[0]
+        changed_edge_types = db.execute(
+            f"SELECT COUNT(DISTINCT a.occ || ':' || b.occ) "
+            f"{scoped_join} AND a.occ != b.occ"
+        ).fetchone()[0]
+        if total != (total - changed) + changed:
+            raise RuntimeError(f"Transition arithmetic failed for {label}")
+        print(f"[{label}]")
+        print(f"valid_adjacent_links={total}")
+        print(f"occupation_changes={changed}")
+        print(f"same_occupation_or_state={total - changed}")
+        print(f"self_loop_edge_types={self_edge_types}")
+        print(f"changed_edge_types={changed_edge_types}")
 
     print(f"rows={rows}")
     print(f"source_rows={source_rows}")
@@ -121,11 +136,11 @@ def main() -> None:
         print(f"  {source}: {count}")
     print(f"unique_months={len(months)}")
     print(f"unique_ids={db.execute('SELECT COUNT(DISTINCT pid) FROM observations').fetchone()[0]}")
-    print(f"valid_adjacent_month_transitions={total}")
-    print(f"occupation_changes={changed}")
-    print(f"same_occupation={total - changed}")
-    print(f"self_loop_edge_types={self_edge_types}")
-    print(f"changed_edge_types={changed_edge_types}")
+    report("with_0000")
+    report(
+        "occupation_only",
+        "AND a.occ != '0000' AND b.occ != '0000'",
+    )
     print(f"local_intermediate={DB_PATH}")
     db.close()
 
