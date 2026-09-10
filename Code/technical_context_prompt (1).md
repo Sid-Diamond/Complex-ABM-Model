@@ -67,12 +67,24 @@ Linked monthly observations can therefore support an observed month-to-month
 transition network, subject to linkage and sampling limitations.
 
 Initial profiling found 1,643,075 valid adjacent-month observations, 124,097
-occupation changes, and 37,689 distinct directed edges after removing exact
-duplicate person-month observations. These are preliminary diagnostics, not
-validated results. Validate duplicate handling, CPSIDP linkages, occupation
-codes, sample coverage, and survey weights before constructing a network.
+occupation changes, 37,163 distinct changed-occupation edge types, and 526
+occupation codes after removing exact duplicate person-month observations.
+These are preliminary diagnostics, not validated population estimates.
+Validate duplicate handling, CPSIDP linkages, occupation codes, sample
+coverage, and survey weights before making substantive claims.
 
 Raw data and local intermediates are under `Data/` and are excluded from Git.
+
+## Current code workflow
+
+`scripts/inspect_ipums.py` audits the extract and creates the local SQLite
+probe. `scripts/build_dynamic_networks.py` creates monthly node and edge CSVs.
+`scripts/main.py` is the visualisation entry point; edit its `CONFIG` only:
+`save=False` opens an interactive Matplotlib slider, while `save=True` writes
+one PDF per month without displaying figures. `scripts/network_visualisation.py`
+contains the reusable NetworkX and Matplotlib functions. The current layout is
+a seeded, weighted aggregate `spring_layout`; monthly edges and node sizes
+change while node positions remain fixed.
 
 ## Cautions
 

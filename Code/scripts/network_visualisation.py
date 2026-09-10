@@ -12,6 +12,15 @@ import networkx as nx
 from matplotlib.widgets import Button, Slider
 
 
+# Visual hyperparameters: adjust these before changing plotting logic.
+NODE_SIZE_BASE = 3
+NODE_SIZE_SCALE = 260
+LABEL_COUNT = 15
+LAYOUT_K = 0.55
+LAYOUT_SCALE = 1.45
+LAYOUT_LIMIT = 1.55
+
+
 def load_variant(data_dir: Path, variant: str):
     nodes_by_month = defaultdict(list)
     edges_by_month = defaultdict(list)
@@ -37,8 +46,16 @@ def stable_layout(edges_by_month, codes):
             if edge["a"] != edge["b"]:
                 old = aggregate.get_edge_data(edge["a"], edge["b"], {}).get("weight", 0)
                 aggregate.add_edge(edge["a"], edge["b"], weight=old + math.log1p(edge["count"]))
-    ordered = sorted(aggregate, key=lambda code: (-aggregate.degree(code, weight="weight"), code))
-    return nx.circular_layout(ordered)
+    # Use the aggregate graph only to determine fixed positions. The monthly
+    # frames then change edges and node sizes without the layout jumping.
+    return nx.spring_layout(
+        aggregate,
+        seed=42,
+        weight="weight",
+        iterations=100,
+        k=LAYOUT_K,
+        scale=LAYOUT_SCALE,
+    )
 
 
 def draw_month(ax, month, nodes, edges, positions, threshold, variant):
@@ -56,10 +73,10 @@ def draw_month(ax, month, nodes, edges, positions, threshold, variant):
     for code in graph:
         x, y = positions[code]
         node = node_by_code.get(code, {"share": 0.0})
-        ax.scatter(x, y, s=80 + 9000 * math.sqrt(node["share"]),
+        ax.scatter(x, y, s=NODE_SIZE_BASE + NODE_SIZE_SCALE * math.sqrt(node["share"]),
                    c="#d97706" if code == "0000" else "#3182ce",
                    edgecolors="#172033", linewidths=0.4, alpha=0.86, zorder=2)
-    for node in sorted(nodes, key=lambda item: item["share"], reverse=True)[:20]:
+    for node in sorted(nodes, key=lambda item: item["share"], reverse=True)[:LABEL_COUNT]:
         x, y = positions[node["code"]]
         ax.text(x, y, node["code"], fontsize=7, ha="center", va="center", zorder=3)
     ax.set_title(f"{variant.replace('_', ' ').title()} | {month}\n"
@@ -68,8 +85,8 @@ def draw_month(ax, month, nodes, edges, positions, threshold, variant):
     ax.text(0.01, 0.01, "Node area = monthly observed share | edge width = transition probability | labels = largest nodes",
             transform=ax.transAxes, fontsize=8, color="#475569")
     ax.axis("off")
-    ax.set_xlim(-1.12, 1.12)
-    ax.set_ylim(-1.12, 1.12)
+    ax.set_xlim(-LAYOUT_LIMIT, LAYOUT_LIMIT)
+    ax.set_ylim(-LAYOUT_LIMIT, LAYOUT_LIMIT)
 
 
 def show_interactive(nodes_by_month, edges_by_month, positions, threshold, variant):

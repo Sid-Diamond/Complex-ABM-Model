@@ -11,7 +11,7 @@ DATA_DIR = ROOT / "Data" / "IPUM" / "dynamic_networks"
 # Edit this dictionary to control the run.
 CONFIG = {
     "variant": "occupation_only",  # or: "with_0000"
-    "edge_threshold": 0.01,
+    "edge_threshold": 0.05,
     "save": False,                  # False = interactive Matplotlib; True = PDFs only
     "output_dir": ROOT / "outputs" / "network_pdfs",
 }

@@ -2,9 +2,9 @@
 
 ## Current phase
 
-We are preparing for paper-led, staged network development. Read-only
-profiling and validation scripts are allowed; do not implement the network,
-ABM, or policy model until the paper and first network step are agreed.
+The audited first empirical network step is implemented. Current work is
+exploratory visualisation and measurement; do not implement an ABM or policy
+model until the network definition and paper connection are agreed.
 
 ## Priorities
 
