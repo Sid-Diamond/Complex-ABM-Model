@@ -5,7 +5,7 @@
 
 ## Aim
 
-Develop a scientifically serious toy model extending Maria del Rio-Chanona and Penny Mealy's work on occupational mobility and automation.
+Develop a scientifically serious toy model designed to answer similar questions to Maria del Rio-Chanona and Penny Mealy's work on occupational mobility and how ai automation will impact jobs.
 
 The eventual output is a technical follow-up to the article in `article.md`, intended to support useful AI-safety policy discussion and a second EA Forum article. The immediate goal is to build and understand the toy model. Do not claim real-world forecasting or policy effectiveness.
 
