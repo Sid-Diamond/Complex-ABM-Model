@@ -69,3 +69,11 @@ only when requested or clearly relevant.
 
 Start with the direct answer. Avoid unnecessary future stages. End with one
 concrete next step when useful.
+
+ ## Evidence standard
+
+  For analytical claims, distinguish facts, calculations, assumptions,
+  interpretations, and proposals. Report the source, variables, filters, and
+  command behind numerical claims. Use executable invariants, reproducible
+  reruns, and independent checks where practical. State what the data cannot
+  establish and identify plausible alternative explanations.
