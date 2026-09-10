@@ -2,8 +2,9 @@
 
 ## Current phase
 
-We are preparing for paper-led, staged network development. Do not write
-implementation code until the paper and first network step are agreed.
+We are preparing for paper-led, staged network development. Read-only
+profiling and validation scripts are allowed; do not implement the network,
+ABM, or policy model until the paper and first network step are agreed.
 
 ## Priorities
 
@@ -59,6 +60,10 @@ The primary agent integrates and checks their results.
 - Before committing or pushing, explain the proposed change and verify it.
 - Keep this file short, specific, and current.
 - Load detailed documents only when relevant; prefer direct file references.
+
+Context defaults: always consult this file; consult the technical context for
+research, data, or modelling tasks; read daily logs and other historical notes
+only when requested or clearly relevant.
 
 ## Style
 

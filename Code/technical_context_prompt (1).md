@@ -58,6 +58,22 @@ Each method must answer a research question. Do not add methods for novelty or v
 - parameter motivation, calibration, sensitivity, and validation;
 - robustness analysis and prediction.
 
+## Current data reality
+
+The local IPUMS-CPS extract contains 6,194,406 person-month records across 56
+months (2020-2026), with current occupation (`OCC`) and linked person IDs
+(`CPSIDP`). It does not contain a direct previous-year occupation variable.
+Linked monthly observations can therefore support an observed month-to-month
+transition network, subject to linkage and sampling limitations.
+
+Initial profiling found 1,643,075 valid adjacent-month observations, 124,097
+occupation changes, and 37,689 distinct directed edges after removing exact
+duplicate person-month observations. These are preliminary diagnostics, not
+validated results. Validate duplicate handling, CPSIDP linkages, occupation
+codes, sample coverage, and survey weights before constructing a network.
+
+Raw data and local intermediates are under `Data/` and are excluded from Git.
+
 ## Cautions
 
 - An O*NET similarity graph is not automatically a mobility network.
@@ -96,5 +112,6 @@ For each paper, record only: data/unit, network construction, assumptions/calibr
 
 ## Next decision
 
-The next task is paper-led network extraction. Do not choose the full research question or pipeline before examining the paper and its data.
-
+The next task is to validate the linked IPUMS panel and decide whether its
+observed transitions are adequate for a first network. Do not choose the full
+research question, network threshold, or modelling pipeline before that check.
