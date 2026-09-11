@@ -12,14 +12,28 @@ For each new idea or task:
 Do not design the complete documentation system before understanding the
 project.
 
-## Automatic versus lazy context
+## Automatic versus on-demand context
 
-Automatically loaded context should contain only stable, high-value rules:
-behaviour, current phase, safety, repository rules, and document locations.
+Use a small context hierarchy rather than loading every project document into
+every task:
+
+- **Always:** `AGENTS.md` for stable working rules, current phase, safety,
+  repository boundaries, and context locations.
+- **Research or modelling work:** the technical context prompt.
+- **Research-direction work:** the technical context, `Decision Log.md`, and
+  `Open Problems.md`.
+- **Implementation work:** the relevant scripts and direct documentation only.
+- **Historical or audit work:** `Day-logs.md`, `Data Audit.md`, and other meta
+  notes when their specific history is relevant.
 
 Load detailed scientific, architectural, experimental, and historical material
-only when relevant. This keeps sessions focused and reduces stale or conflicting
-instructions.
+on demand. If the user asks for a context audit, inspect the full hierarchy.
+This keeps sessions focused, reduces stale or conflicting instructions, and
+makes the source of an instruction clear.
+
+Exploratory work may begin with a hunch or question rather than a settled
+decision. Record its scope and stopping point when practical; do not use the
+context hierarchy as a reason to block low-risk exploration.
 
 ## Implementation quality loop
 

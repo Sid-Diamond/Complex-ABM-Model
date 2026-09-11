@@ -1,10 +1,14 @@
 # Task Template
 
-Use for large, ambiguous, or file-changing tasks.
+Use for large, ambiguous, or file-changing tasks. For exploratory work, replace
+the outcome with the question or hunch being investigated.
 
 ```markdown
-## Outcome
-[What result do I want, and why?]
+## Outcome or question
+[What result or exploratory question do I want, and why?]
+
+## Status
+[Exploration, proposal, or decision]
 
 ## Scope
 [What may change? What is out of scope?]
