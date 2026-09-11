@@ -44,6 +44,14 @@ selection still fit the research question? Avoid becoming highly effective at
 improving an unsuitable local approach. A reasonable package installation is
 allowed when it is scientifically preferable to a quick inferior substitute.
 
+This is exploratory science as well as model engineering. A scientifically
+interesting hunch, mathematical idea, unexpected empirical pattern, or useful
+change of direction may justify investigation before a predetermined decision
+or theory of change exists. Use the decision log to record the question or
+hunch, scope, possible significance, and stopping point when practical; do not
+make the structure so rigid that it suppresses discovery. Methodological
+caution should preserve scientific honesty without preventing useful progress.
+
 ## Candidate direction
 
 A possible sequence is:
@@ -115,10 +123,14 @@ attachment, or the cellular-automaton model belongs in the current empirical
 pipeline.
 
 Known incompleteness should remain visible: the current network is unweighted,
-linkage and occupation-code validity remain to be checked, the visualisation
-may not be an appropriate representation for roughly 526--527 categories, and
+linkage and occupation-code validity remain to be checked, a full network
+diagram may not be an appropriate figure for roughly 526--527 categories, and
 automated tests are still to be added. These are tracked limitations, not
-completed scientific results.
+automatic blockers or completed scientific results. A graph may remain the
+right analytical framework even when a full network diagram is not the right
+visualisation. Stay open to graph statistics, communities, selected subgraphs,
+clustered views, dimensionality reduction, and other methods where they reveal
+something scientifically interesting.
 
 ## Cautions
 

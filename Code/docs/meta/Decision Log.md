@@ -2,14 +2,19 @@
 
 This records consequential project decisions, the alternatives considered, the
 evidence used, and what would cause us to revisit them. It is a decision record,
-not a list of implementation tasks.
+not a list of implementation tasks. Exploratory questions and hunches belong
+here too; not every investigation must be backchained from a settled theory of
+change.
 
-## 2026-09-11 — Use a decision-driven workflow
+## 2026-09-11 — Use a decision- and exploration-aware workflow
 
-- **Decision:** Every substantial task should state the decision it informs, the
-  evidence that could change the decision, and a stopping condition.
+- **Decision:** Every substantial task should state either the decision it
+  informs or the exploratory question/hunch it investigates, together with the
+  evidence that could change our direction and a stopping condition where
+  practical.
 - **Reason:** Prevent open-ended validation and local optimisation of an
-  unsuitable method.
+  unsuitable method without suppressing mathematical exploration, unexpected
+  empirical findings, or changes in scientific direction.
 - **Revisit if:** The structure becomes burdensome or fails to improve project
   direction.
 
@@ -75,3 +80,13 @@ not a list of implementation tasks.
 - **Next evidence:** A written statement of the target phenomenon, unit of
   analysis, mechanism, outcome, calibration requirements, and acceptable
   simplifications.
+
+## 2026-09-11 — Keep graph analysis distinct from graph visualisation
+
+- **Decision:** Do not infer that a crowded network diagram makes network science
+  unsuitable. Continue to consider graph statistics, communities, selected
+  subgraphs, clustered views, dimensionality reduction, and other analyses.
+- **Reason:** The scientific interest may lie in linkages and graph structure,
+  while a full graph figure may simply be a poor communication device.
+- **Status:** Open exploratory direction; methods should be chosen for the
+  question and the pattern they can reveal.

@@ -36,6 +36,11 @@ long-running work so the researcher can learn from and supervise the process.
 - Optimise for both project progress and the researcher's understanding of the
   implementation. Do not silently turn a collaborative task into a long
   autonomous run.
+- Preserve room for exploratory science. A reasonable hunch, mathematical
+  question, or unexpected empirical pattern may justify an investigation before
+  a downstream decision is known. Record the hunch, scope, and what it may
+  reveal when practical; do not force every exploratory task into a rigid
+  predetermined theory of change.
 - Before substantial implementation or debugging, briefly reconsider whether
   the method, representation, visualisation, and tool choice still fit the
   research question. Do not locally optimise a fundamentally poor approach.
@@ -55,6 +60,9 @@ long-running work so the researcher can learn from and supervise the process.
   to confirm numbers but to improve shared understanding of the data and model.
 - Be explicit that validation of the workflow does not fully validate an
   inaccessible dataset, model, or scientific conclusion.
+- An open problem is not automatically a blocker. Mark an issue as blocking only
+  when proceeding would make the result misleading or prevent the next useful
+  question from being answered.
 
 ## Reference code and incomplete work
 

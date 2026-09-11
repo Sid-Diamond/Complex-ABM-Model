@@ -3,15 +3,17 @@
 This is a living register of unresolved scientific, data, and engineering
 issues. An item is not complete merely because code exists for it.
 
-## High priority
+## High priority / active exploration
 
-### Decide whether the IPUMS network answers the intended question
+### Explore what the IPUMS graph can reveal
 
-- **Issue:** Monthly linked occupation changes may be useful descriptively but may
-  not match the transition concept used in the target papers.
-- **Needed:** Pen-and-paper definition of the target phenomenon, followed by a
-  comparison with Mealy and del Rio-Chanona modelling recipes.
-- **Status:** Open; do not start ABM architecture design yet.
+- **Question:** What interesting graph structure, empirical regularity, or
+  modelling opportunity is present in the monthly linked occupation data?
+- **Possible approaches:** Degree and strength distributions, centrality,
+  communities, selected subgraphs, transition matrices, clustered views,
+  dimensionality reduction, and comparison with the target papers.
+- **Status:** Open exploratory direction. The graph may be useful analytically
+  even if a full network diagram is not useful as a figure.
 
 ### Validate CPSIDP linkage quality
 
@@ -20,6 +22,8 @@ issues. An item is not complete merely because code exists for it.
 - **Needed:** Demographic consistency checks and, where appropriate, comparison
   with `CPSIDV` or other CPS linkage information.
 - **Risk:** Spurious transitions or missed transitions could alter the network.
+- **Priority:** Important eventual validation, but not currently a blocker for
+  clearly labelled exploratory toy-model analysis.
 
 ### Establish the meaning of `OCC = 0000`
 
@@ -28,17 +32,20 @@ issues. An item is not complete merely because code exists for it.
 - **Needed:** Inspect the relevant CPS documentation and consider `EMPSTAT` and
   `LABFORCE`; determine whether external data are needed.
 - **Status:** Keep both variants until this is resolved.
+- **Priority:** Important interpretation question, but not currently a blocker
+  for clearly labelled exploratory analysis.
 
-### Decide whether a network is the right representation
+### Keep representation choices open
 
 - **Issue:** A graph with roughly 526–527 categories may be difficult to
   interpret, and a network may not be the most useful object for the eventual
   research question.
-- **Needed:** Compare aggregate flows, transition matrices, clustered views,
-  selected subgraphs, and other representations before further visualisation
-  work.
+- **Needed:** Compare graph statistics, aggregate flows, transition matrices,
+  clustered views, selected subgraphs, dimensionality reduction, and other
+  representations where they reveal something scientifically interesting. A
+  crowded diagram does not by itself invalidate graph analysis.
 
-## Medium priority
+## Medium priority / return later
 
 ### Add survey weights
 
@@ -52,6 +59,8 @@ issues. An item is not complete merely because code exists for it.
 - **Issue:** Codes and coverage may not be stable across the full period.
 - **Needed:** Inspect code definitions, year coverage, missingness, and the
   October 2025 gap.
+- **Priority:** Preserve explicitly, but do not require resolution before
+  beginning useful exploratory analysis.
 
 ### Compare transition windows
 
@@ -74,7 +83,8 @@ issues. An item is not complete merely because code exists for it.
 - Assume a DAG, preferential attachment, or homophily in the labour network.
 - Calibrate policy effects or make forecasting claims.
 - Build elaborate visualisations before confirming that the representation is
-  useful.
+  useful. This does not defer graph-theoretic analysis merely because a full
+  network diagram is crowded.
 
 ## Reference material
 
