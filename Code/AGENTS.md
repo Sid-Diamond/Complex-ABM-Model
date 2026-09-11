@@ -18,6 +18,12 @@ Inspect relevant files and make a concise plan. For code, include the outcome,
 scope, files, assumptions, acceptance criteria, risks, and verification. Include
 the researcher in the plan.
 
+For every new script, announce its purpose, main methods, and expected runtime,
+then invite the researcher to inspect it. For substantial implementation,
+debugging, package installation, or data-processing work, announce the scope
+and give a rough time estimate before starting. Send progress updates during
+long-running work so the researcher can learn from and supervise the process.
+
 ## Working principles
 
 - Be concise and focus on the immediate task.
@@ -27,6 +33,38 @@ the researcher in the plan.
 - Prefer small, reversible changes.
 - Explain the purpose of new Markdown files before creating them.
 - Report what was actually checked; passing tests do not prove scientific validity.
+- Optimise for both project progress and the researcher's understanding of the
+  implementation. Do not silently turn a collaborative task into a long
+  autonomous run.
+- Before substantial implementation or debugging, briefly reconsider whether
+  the method, representation, visualisation, and tool choice still fit the
+  research question. Do not locally optimise a fundamentally poor approach.
+- A package installation or dependency is justified when it materially improves
+  scientific fitness; autonomy concerns alone are not a reason to implement an
+  inferior substitute.
+
+## Validation and stopping rules
+
+- Use independent checks for important calculations, especially when the
+  researcher cannot directly inspect the underlying data.
+- Stop repeating equivalent checks once independent methods converge and no new
+  information is emerging. Record the remaining uncertainty, limitations, and
+  unresolved alternatives, then move on.
+- Continue auditing when a check tests a different assumption, exposes new
+  structure, or changes the interpretation. The purpose of auditing is not only
+  to confirm numbers but to improve shared understanding of the data and model.
+- Be explicit that validation of the workflow does not fully validate an
+  inaccessible dataset, model, or scientific conclusion.
+
+## Reference code and incomplete work
+
+- Treat `scripts/Homophilic CA Simulation and Analysis.py` as deliberate
+  reference code for scientific methodology and the researcher's technical
+  background. It is not automatically a template or a component of the current
+  empirical pipeline.
+- Track known incomplete, scientifically unsatisfactory, or deferred work
+  explicitly. Do not present exploratory code or a passing check as finished
+  science.
 
 ## Task loop
 
@@ -64,6 +102,8 @@ The primary agent integrates and checks their results.
 Context defaults: always consult this file; consult the technical context for
 research, data, or modelling tasks; read daily logs and other historical notes
 only when requested or clearly relevant.
+For research-direction work, also consult `docs/meta/Decision Log.md` and
+`docs/meta/Open Problems.md` before proposing implementation.
 
 ## Style
 

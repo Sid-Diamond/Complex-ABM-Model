@@ -22,6 +22,28 @@ Work data-first and paper-first:
 
 There are no settled choices yet about the dataset, unit, transition mechanism, AI exposure, ABM structure, policy outcome, or robustness criterion.
 
+The project is also a collaboration and learning process. The researcher wants
+visibility into how code is built, not only the final files. Announce new
+scripts, explain their purpose and main methods, invite inspection, and give a
+rough duration before substantial implementation, debugging, package
+installation, or data processing. Provide progress updates during long runs.
+Optimise for learning and scientific defensibility as well as speed.
+
+Use independent validation for important calculations, particularly when the
+researcher cannot directly inspect the source data. The stopping rule is
+convergence across genuinely independent checks, or a clear explanation of why
+convergence cannot be established. Do not repeat equivalent checks indefinitely:
+record residual uncertainty and move on. Continue checking when a test probes a
+different assumption or reveals new information about the data or modelling
+problem. A validated workflow is not the same as a fully validated dataset,
+model, or conclusion.
+
+Before substantial implementation or debugging, pause for a short methodology
+review: does the representation, visualisation, dependency choice, and tool
+selection still fit the research question? Avoid becoming highly effective at
+improving an unsuitable local approach. A reasonable package installation is
+allowed when it is scientifically preferable to a quick inferior substitute.
+
 ## Candidate direction
 
 A possible sequence is:
@@ -85,6 +107,18 @@ one PDF per month without displaying figures. `scripts/network_visualisation.py`
 contains the reusable NetworkX and Matplotlib functions. The current layout is
 a seeded, weighted aggregate `spring_layout`; monthly edges and node sizes
 change while node positions remain fixed.
+
+`scripts/Homophilic CA Simulation and Analysis.py` is retained as deliberate
+reference code for scientific methodology and for understanding the researcher's
+technical background. It is not evidence that homophily, preferential
+attachment, or the cellular-automaton model belongs in the current empirical
+pipeline.
+
+Known incompleteness should remain visible: the current network is unweighted,
+linkage and occupation-code validity remain to be checked, the visualisation
+may not be an appropriate representation for roughly 526--527 categories, and
+automated tests are still to be added. These are tracked limitations, not
+completed scientific results.
 
 ## Cautions
 
